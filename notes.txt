@@ -38,6 +38,59 @@ To https://github.com/GirishMS187/edu2.git
 $ git rm --cached python.py.orig
 rm 'python.py.orig' 
 
+#gives remote info
 $ git remote -v
 origin  https://github.com/GirishMS187/edu2.git (fetch)
 origin  https://github.com/GirishMS187/edu2.git (push)
+
+
+GirishMS@DESKTOP-FKS7R64 MINGW64 ~/Desktop/git (master)
+$ git tag --a v1.0 -m "ver"
+
+GirishMS@DESKTOP-FKS7R64 MINGW64 ~/Desktop/git (master)
+$ git tag
+v1.0
+
+GirishMS@DESKTOP-FKS7R64 MINGW64 ~/Desktop/git (master)
+$ git show v1.0
+tag v1.0
+Tagger: girish <girish.shet187@gmail.com>
+Date:   Sun Jun 30 09:34:29 2019 +0530
+
+ver
+
+commit e33a7f2986c63481d252a7f2e2fea83ac4d4372f (HEAD -> master, tag: v1.0, origin/master)
+Merge: 2bc9729 f2f29df
+Author: girish <girish.shet187@gmail.com>
+Date:   Sun Jun 30 09:30:23 2019 +0530
+
+    Merge branch 'master' of https://github.com/GirishMS187/edu2
+
+#push the changes and see the use case for tagging
+#meaningfull name to commit, used for release
+$ git push origin master --tags
+Enumerating objects: 1, done.
+Counting objects: 100% (1/1), done.
+Writing objects: 100% (1/1), 154 bytes | 51.00 KiB/s, done.
+Total 1 (delta 0), reused 0 (delta 0)
+To https://github.com/GirishMS187/edu2.git
+ * [new tag]         v1.0 -> v1.0
+
+
+#use the tag from local/remote
+$ git checkout v1.0
+Note: checking out 'v1.0'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b <new-branch-name>
+
+HEAD is now at e33a7f2 Merge branch 'master' of https://github.com/GirishMS187/edu2
+M       notes.txt
+
+GirishMS@DESKTOP-FKS7R64 MINGW64 ~/Desktop/git ((v1.0))

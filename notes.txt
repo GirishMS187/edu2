@@ -1,0 +1,43 @@
+$ git config --global --list
+user.name=girish
+user.email=girish.shet187@gmail.com
+merge.tool=mt
+
+$ git remote rm origin
+
+$ git log --oneline
+b1ba55a (HEAD -> master, br1) value added a+b
+6d07a02 value of b
+68cc0e7 a value added
+5d234af (origin/master) Create python.py
+e03d715 hi
+
+ftach: remote to local :does not affect
+pul :featch + merge :affect your working copy
+
+$ git pull origin master
+From https://github.com/GirishMS187/edu2
+ * branch            master     -> FETCH_HEAD
+Auto-merging python.py
+Merge made by the 'recursive' strategy.
+ python.py | 1 +
+ 1 file changed, 1 insertion(+)
+
+$ git push origin master
+Enumerating objects: 16, done.
+Counting objects: 100% (16/16), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (12/12), done.
+Writing objects: 100% (12/12), 1.15 KiB | 236.00 KiB/s, done.
+Total 12 (delta 3), reused 0 (delta 0)
+remote: Resolving deltas: 100% (3/3), done.
+To https://github.com/GirishMS187/edu2.git
+   17feafb..b649fab  master -> master
+
+#remove files from staging area
+$ git rm --cached python.py.orig
+rm 'python.py.orig' 
+
+$ git remote -v
+origin  https://github.com/GirishMS187/edu2.git (fetch)
+origin  https://github.com/GirishMS187/edu2.git (push)

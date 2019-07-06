@@ -9,6 +9,6 @@ print("Value of a and b are:", a,b)
 print("Value of a+b is:",a+b)
 
 c=10
-d=10
+d=30
 
 print("c and d")

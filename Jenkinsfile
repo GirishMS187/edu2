@@ -18,6 +18,12 @@ pipeline{
                 sh 'mvn test'
                 
                  }
+         stage('Clean up'){
+            steps{
+                echo "cleaning up......!"
+                cleanWs()
+                
+                 }
         }
     }
 }
